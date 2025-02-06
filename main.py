@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import pandas as pd
 import numpy as np
 from difflib import get_close_matches
+import os
 
 app = Flask(__name__)
 
@@ -66,4 +67,5 @@ def index():
     return render_template('index.html', disease=None, info=None)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 10000))  # Default port for Render is 10000
+    app.run(host='0.0.0.0', port=port)
