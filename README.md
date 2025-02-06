@@ -79,10 +79,6 @@ Diet Recommendations:
 - Enhance disease name correction using advanced NLP techniques.
 - Provide alternative medication options.
 
-## Deployment Link
-[This project is open-source under the MIT License.]
-(https://medicine-recommendation-system-project.onrender.com)
-
 ## Author
 Mujtaba Saqib
 
