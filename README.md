@@ -73,11 +73,8 @@ Diet Recommendations:
 3. Leafy green vegetables
 ```
 
-## Future Enhancements
-- Implement symptom-based disease prediction.
-- Develop a web-based or mobile application for user-friendly interaction.
-- Enhance disease name correction using advanced NLP techniques.
-- Provide alternative medication options.
+## Deployment Link
+[(https://medicine-recommendation-system-project.onrender.com/)]
 
 ## Author
 Mujtaba Saqib
