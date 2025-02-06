@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Recommendation System</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medicine Recommendation System</h1>
+        <form method="POST">
+            <label for="disease">Enter Disease:</label>
+            <input type="text" id="disease" name="disease" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+        
+        {% if disease %}
+        <div class="result">
+            <h2>Recommended Medicine for: {{ disease }}</h2>
+            <p><strong>Description:</strong> {{ info['description'] }}</p>
+            
+            {% if info['medications'] %}
+            <p><strong>Medications:</strong></p>
+            <ul>
+                {% for medication in info['medications'] %}
+                <li>{{ medication }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            {% if info['precautions'] %}
+            <p><strong>Precautions:</strong></p>
+            <ul>
+                {% for precaution in info['precautions'][0] %}
+                <li>{{ precaution }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            {% if info['workout'] %}
+            <p><strong>Workout Recommendations:</strong></p>
+            <ul>
+                {% for workout in info['workout'] %}
+                <li>{{ workout }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            {% if info['diets'] %}
+            <p><strong>Diet Recommendations:</strong></p>
+            <ul>
+                {% for diet in info['diets'] %}
+                <li>{{ diet }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>
+            <strong>GitHub:</strong> <a href="https://github.com/mujtabasaqib19" target="_blank">mujtabasaqib19</a> |
+            <strong>Email:</strong> <a href="mailto:mujtabasaqib654@gmail.com">mujtabasaqib654@gmail.com</a> |
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mujtaba-saqib" target="_blank">Mujtaba Saqib</a>
+        </p>
+    </footer>
+</body>
+</html>
